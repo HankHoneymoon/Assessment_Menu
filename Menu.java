@@ -1,6 +1,6 @@
 package assessmentproject2;//Names doc.
 import java.util.Scanner;//Imports Scanner tool, which reads user input.
-import java.util.regex.*;//Imports Regex tool
+import java.util.regex.*;
 /**
  *
  * Author: Justin Michael Boon
@@ -77,7 +77,7 @@ public class Menu {//CLASS THAT DEFINES MENU (& THE ENTIRE DOCUMENT)
         String newName;
         System.out.println("Welcome to my program! To start, please enter your name:");//prompts for name before displaying menu
         newName=namePrompt.next();
-            if(!newName.matches("^[a-zA-Z]+ [a-zA-Z]+$"))//<----------------------------------------------------IT'S HERE COLIN------------------------------>
+            if(!newName.matches("[a-zA-Z]+ [a-zA-Z]+"))
             {
                 System.out.print("Please re-enter your name using only letters and spaces.\n");
                 welcomeName();
@@ -97,7 +97,7 @@ public class Menu {//CLASS THAT DEFINES MENU (& THE ENTIRE DOCUMENT)
        String fullName;//declares new string
        fullName=firstInitial+" "+lastName;//defines new string as combination of previous 2 strings.
        {
-        if(!fullName.matches("[a-zA-Z ]+[a-zA-Z ]"))
+        if(!fullName.matches("[a-zA-Z]+ [a-zA-Z]+"))
             {
                 System.out.print("Please re-enter your name using only letters and spaces.\n");
                 NameCall();
